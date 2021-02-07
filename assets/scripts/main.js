@@ -25,17 +25,20 @@ honk.addEventListener("submit", playHonk);
 
 function editVol(e){
     let newVol = e.target.value;
-    aud.volume = newVol / 100;
+    hornSound.volume = "." + newVol;
     volNum.value = newVol;
     volSlider.value = newVol;
     if(newVol > 66){
         volImage.src = "./assets/media/icons/volume-level-3.svg";
+        honk.disabled = false;
     }
     else if(newVol > 33){
         volImage.src = "./assets/media/icons/volume-level-2.svg";
+        honk.disabled = false;
     }
     else if(newVol > 0){
         volImage.src = "./assets/media/icons/volume-level-1.svg";
+        honk.disabled = false;
     }
     else{
         volImage.src = "./assets/media/icons/volume-level-0.svg";
