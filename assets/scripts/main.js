@@ -18,7 +18,7 @@ var radCar = document.getElementById("radio-car-horn");
 radCar.addEventListener('click', editSound);
 
 var radParty = document.getElementById("radio-party-horn");
-radPArty.addEventListener('click', editSound);
+radParty.addEventListener('click', editSound);
 
 var honk = document.getElementById("honk-btn");
 honk.addEventListener("submit", playHonk);
@@ -51,7 +51,7 @@ function editSound(e){
     }
     else if(radCar.checked){
         hornSound.src = "./assets/media/audio/car-horn.mp3";
-        hornImage.src = "./assets/media/images/car-horn.svg";
+        hornImage.src = "./assets/media/images/car.svg";
         hornImage.alt = "Car Horn";
     }
     else{
