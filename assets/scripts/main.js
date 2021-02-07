@@ -21,7 +21,7 @@ var radParty = document.getElementById("radio-party-horn");
 radParty.addEventListener('click', editSound);
 
 var honk = document.getElementById("honk-btn");
-honk.addEventListener("submit", playHonk);
+honk.addEventListener("click", playHonk);
 
 function editVol(e){
     let newVol = e.target.value;
@@ -65,6 +65,8 @@ function editSound(e){
 }
 
 function playHonk(e){
+    e.preventDefault();
+    console.log("hello");
     hornSound.play();
 }
 // TODO
